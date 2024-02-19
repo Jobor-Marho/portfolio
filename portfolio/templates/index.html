@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="I am experienced in leveraging web development/web application frameworks in the development of responsive and mobile friendly websites and applications">
+    <meta name="author" content="I am Jobor Frederick a software engineer.">
+    
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <title>Jobor Frederick</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/devicons/css/devicons.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/resume.min.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Portfolio</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2 " src="{% static 'img/profilepic.jpeg' %}" alt="myprofilepic">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <!-- error -->
+      {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == 'error' %}
+                <div class="message text-center alert alert-danger {{ message.tags }}">
+                    <i class="bi bi-exclamation-triangle-fill"></i> {{ message }}
+                </div>
+            {% else %}
+                <div class="message text-center alert alert-success {{ message.tags }}">
+                  <i class="bi bi-check-circle-fill"></i> {{ message }}
+                </div>
+            {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">Jobor
+            <span class="text-primary">Frederick</span>
+          </h1>
+          <div class="subheading mb-5">{{ street }} · {{ location }} · <a href='#' class="contactMe">{{ phonenum }}</a> · <a href='#emailMe' class="contactMe">{{ email }}</a></div>
+          <p class="mb-5 text-justify">I am experienced in leveraging web development/web application frameworks in the development of responsive and mobile friendly websites and applications </p>
+          
+        </div>
+      </section>
+
+      <!-- <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+        <div class="my-auto">
+          <h2 class="mb-5">Experience</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Senior Web Developer</h3>
+              <div class="subheading mb-3">Intelitec Solutions</div>
+              <p class="text-justify">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">March 2013 - Present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Web Developer</h3>
+              <div class="subheading mb-3">Intelitec Solutions</div>
+              <p class="text-justify">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">December 2011 - March 2013</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Junior Web Designer</h3>
+              <div class="subheading mb-3">Shout! Media Productions</div>
+              <p class="text-justify">Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">July 2010 - December 2011</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Web Design Intern</h3>
+              <div class="subheading mb-3">Shout! Media Productions</div>
+              <p class="text-justify">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">September 2008 - June 2010</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section> -->
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">Education</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">Enugu State University of Science and Technology </h3>
+              <div class="subheading mb-3">Bachelor of Science</div>
+              <div>Computer Science & Information Science</div>
+              
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">November 2019 - September 2023</span>
+            </div>
+          </div>
+
+          
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Skills</h2>
+
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline list-icons">
+            <li class="list-inline-item text-center">
+              <i class="devicons devicons-html5"></i>
+              <p  class="small-text">HTML</p>
+            </li>
+            <li class="list-inline-item text-center">
+              <i class="devicons devicons-css3"></i>
+              <p  class="small-text">CSS</p>
+            </li>
+            <li class="list-inline-item text-center">
+              <i class="devicons devicons-javascript"></i>
+              <p class="small-text">Javascript</p>
+            </li>
+            <li class="list-inline-item text-center">
+              <i class="devicons devicons-jquery"></i>
+              <p class="small-text">jQuery</p>
+            </li>
+
+            <li class="list-inline-item text-center">
+              <i class="devicons devicons-bootstrap"></i>
+              <p  class="small-text">Bootstrap</p>
+            </li>
+            
+            <li class="list-inline-item text-center">
+              <i class="devicons devicons-postgresql"></i>
+              <p class="small-text">Postgresql</p>
+            </li>
+            <li class="list-inline-item text-center">
+              <i class="devicons devicons-django"></i>
+              <p class="small-text">Django</p>
+            </li>
+            
+            <li class="list-inline-item text-center">
+              <i class="devicons devicons-python"></i>
+              <p class="small-text">Python</p>
+            </li>
+          </ul>
+
+          <div class="subheading mb-3">Workflow</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Mobile-First, Responsive Design</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Browser Testing &amp; Debugging</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Cross Functional Teams</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Agile Development &amp; Scrum</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+        <div class="my-auto">
+          <h2 class="mb-5">Interests</h2>
+          <p class="text-justify">Apart from being a web developer & a backend engineer, I enjoy most of my time being outdoors.</p>
+          <p class="mb-0 text-justify">When I am indoors, I follow a number of sci-fi and fantasy genre movies and television shows. I am also a good gamer, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+        <div class="my-auto">
+          <h2 class="mb-5">Awards &amp; Certifications</h2>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-trophy text-warning"></i>
+              NIIT Python Certificate
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="contact">
+        <div class="my-auto">
+          <h2 class="mb-5">Contact Me</h2>
+
+          <h3 class="mb-4 mt-5">Social Media</h3>
+            <ul class="list-inline list-social-icons mb-0">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.x.com/i_am_frederick_">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/jobor-frederick-991536210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=web/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.github.com/Jobor-Marho">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/joborfrederick">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5 mt-5">
+            <div class="resume-content">
+              <h3 class="mb-5" id="emailMe">Send Me a Mail </h3>
+              <div class="mt-4 my-auto d-lg-flex w-100 justify-content-between">
+                <div class="w-60">
+                  <form action="{% url 'basicapp:contact' %}" method="post">
+                    {% csrf_token %}
+                    <div class="name">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" name="" id="name" class="form-control">
+                    </div>
+
+                    <div class="email mt-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" name="email" id="email" class="form-control">
+                    </div>
+
+                    <div class="msg mt-3">
+                      <label for="msg" class="form-label">Message</label>
+                      <textarea name="msg" id="msd" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+
+                    <div class="btn-submit mt-3">
+                      <button type="submit" class="btn-submit btn btn-lg btn-primary w-100 border rounded">Send <i class='bi bi-send'></i></button>
+                    </div>
+                  </form>
+                </div>
+              
+                <div class="d-none d-lg-inline">
+                  <img class='contactMe p-2' src="{% static 'img/contactme.jpg' %}" alt="">
+                </div>
+              </div>
+              
+          </div>
+
+          
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static 'js/resume.min.js' %}"></script>
+    <script src="{% static 'js/animation.js' %}"></script>
+    
+  </body>
+
+</html>
