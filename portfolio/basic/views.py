@@ -1,13 +1,12 @@
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.contrib import messages
+from django.conf import settings
 import smtplib
 
 # Create your views here.
 
-g_mail = "imlearning862@gmail.com"
-yahoo_mail = "imlearning268@yahoo.com"
-gmail_password = "wkthkankpzblxvpq"
+
 
 class IndexView(TemplateView):
     template_name = 'index.html'
@@ -30,14 +29,14 @@ def contact(request):
 
         try:
             with smtplib.SMTP_SSL("smtp.gmail.com") as connection:
-                connection.login(user=g_mail, password=gmail_password)
-                connection.sendmail(from_addr=email, to_addrs=g_mail, msg="Subject:New Message"
+                connection.login(user=settings.GMAIL, password=settings.GMAIL_PASSWORD)
+                connection.sendmail(from_addr=email, to_addrs=settings.GMAIL, msg="Subject:New Message"
                                                                         "\n\nSomeone sent you a message\n"
                                                                         f"Name: {str(name).title()}\nEmail: {email}\nMessage: {msg}\n")
                 
         except:
-            messages.error(request,'Something Went Wrong') 
+            messages.error(request,'Something Went Wrong. Please Try Again.') 
             return redirect('basicapp:home')
         else:
-            messages.success(request,'Frederick Received your Message')
+            messages.success(request,'Frederick Received your Message and will get back to you Shortly')
             return redirect('basicapp:home')
