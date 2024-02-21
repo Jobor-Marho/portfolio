@@ -331,17 +331,17 @@
                     {% csrf_token %}
                     <div class="name">
                       <label for="name" class="form-label">Name</label>
-                      <input type="text" name="" id="name" class="form-control">
+                      <input type="text" name="name" id="name" class="form-control" required>
                     </div>
 
                     <div class="email mt-3">
                       <label for="email" class="form-label">Email</label>
-                      <input type="email" name="email" id="email" class="form-control">
+                      <input type="email" name="email" id="email" class="form-control" required>
                     </div>
 
                     <div class="msg mt-3">
                       <label for="msg" class="form-label">Message</label>
-                      <textarea name="msg" id="msd" cols="30" rows="10" class="form-control"></textarea>
+                      <textarea name="msg" id="msd" cols="30" rows="10" class="form-control" required></textarea>
                     </div>
 
                     <div class="btn-submit mt-3">
