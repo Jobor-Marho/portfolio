@@ -14,8 +14,7 @@ class IndexView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(IndexView, self).get_context_data()
-        context['street'] = 'Before Affisere Secondary School'
-        context['location'] = 'Ughelli, Delta State, Nigeria'
+        context['location'] = 'Lagos, Nigeria'
         context['phonenum'] = '+234 903 048 0419'
         context['email'] = 'joborfrederick@gmail.com'
 
