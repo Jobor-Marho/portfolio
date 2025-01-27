@@ -38,7 +38,7 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" class="text-justify">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
@@ -122,11 +122,11 @@
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Website Developer</h3>
-              <div class="subheading mb-3">The National institute of Information and Technology - NIIT</div>
-              <p class="text-justify">I focus on creating dynamic, responsive, and user-friendly websites using modern web technologies. My expertise lies in both frontend and backend development, ensuring seamless integration and optimized performance across devices.</p>
+              <div class="subheading mb-3">Personal project </div>
+              <p class="text-justify">Designed a website for processing mobile network e-pins (MTN and Glo) generated through MoMo USSD. The workflow involves generating e-pins using MoMo USSD, copying the received messages, and inputting them into the website. The website extracts the e-pins and serial numbers, categorizes them by mobile network (MTN or Glo), and formats them according to their respective denominations. Once formatted, the data is prepared for printing and ready for sale to customers.</p>
             </div>
             <div class="resume-date text-md-right">
-              <span class="text-primary">April 2024 - September 2024</span>
+              <span class="text-primary">August 2024 - September 2024</span>
             </div>
           </div>
 
@@ -247,22 +247,54 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
         <div class="my-auto">
-          <h2 class="mb-5">Projects</h2>
+          <h2 class="mb-5">Projects I've worked on</h2>
 
-          <div class="subheading mb-3">Projects I've worked on</div>
-          <ul class="list-inline list-icons">
-            <li class="list-inline-item text-center">
-              <a href="https://djangoblog-66iv.onrender.com"><p  class="small-text">Blog Site</p></a>
-            </li>
+          <div class="mb-5">
+            <div class="subheading mb-3">Blog</div>
+            <p>I designed a simple blog platform using Django and Bootstrap. The platform offers the following features:</p>
+            <ul class="fa-ul mb-2">
+                <li>User Authentication: Users can sign up for an account and log in to access additional functionality.</li>
+                <li>Commenting System: Authenticated users can leave comments on blog posts.</li>
+                <li>Admin Management: Admin users have full control over blog posts, including the ability to add, update, and delete posts.</li>
+                <li>Post Creation with Media: Posts can include text and images, enhancing their visual appeal.</li>
+                <li>Database Storage: All data, including user information, posts, comments, and images, is stored in a database for efficient management and retrieval.</li>
+            </ul>
+            <p>This project leverages Django's robust backend framework for functionality and Bootstrap for a responsive, user-friendly interface.</p>
+            <a href="https://djangoblog-66iv.onrender.com" class="btn btn-outline-primary rounded-pill">Visit Site <i class="bi bi-globe"></i></a>
+          </div>
 
-          </ul>
-          <ul class="list-inline list-icons">
-            <li class="list-inline-item text-center">
-              <a href="http://ec2-16-171-33-29.eu-north-1.compute.amazonaws.com/api/docs/"><p  class="small-text">Receipe API</p></a>
-            </li>
-          </ul>
+          <div class="mb-5">
+            <div class="subheading mb-3">Receipe API</div>
+            <p>I designed a Recipe API using Django, providing a robust and feature-rich platform for managing recipes. The key features and technical aspects of the project include:</p>
+            <ul class="fa-ul mb-2">
+              <li>User Authentication: Authenticated users can add new recipes, ingredients, tags, and images.</li>
+              <li>CRUD Functionality: Users can create, read, update, and delete recipe data efficiently.</li>
+              <li>Unit Testing: Comprehensive unit tests were implemented to ensure the functionality and reliability of the application.</li>
+              <li>Docker Integration: The application is containerized using Docker, ensuring consistency across development and production environments.</li>
+              <li>Reverse Proxy: Nginx was configured as a reverse proxy to handle and route requests efficiently.</li>
+              <li>Persistent Database: The application uses a PostgreSQL database, deployed as a Docker container, for persistent data storage.</li>
+              <li>Cloud Deployment: The API was deployed on AWS EC2, ensuring scalability and accessibility.</li>
+            </ul>
+            <p>This project combines modern backend practices with cloud infrastructure, providing a scalable and maintainable solution for managing recipe data.</p>
+            <a href="http://ec2-16-171-33-29.eu-north-1.compute.amazonaws.com/api/docs/" class="btn btn-outline-primary rounded-pill">Visit Site <i class="bi bi-globe"></i></a>
+          </div>
 
 
+          <div>
+            <div class="subheading mb-3">CardGen</div>
+            <p>I designed the CardGen website to streamline the processing of mobile network e-pins (MTN and Glo) generated through MoMo USSD. The platform is built to enhance efficiency and accuracy in managing e-pin data. Key features of the project include:</p>
+            <ul class="fa-ul mb-2">
+              <li>E-Pin Extraction: Users generate e-pins through MoMo USSD, copy the received messages, and input them into the website for processing.</li>
+                  <li>Data Processing: The website automatically extracts e-pins and their corresponding serial numbers from the input messages.</li>
+                  <li>Categorization: E-pins are sorted by mobile network (MTN or Glo) and grouped based on their respective denominations.</li>
+                  <li>Formatting: The processed data is formatted for easy readability and printing.</li>
+                  <li>Sales Preparation: The formatted e-pins are ready for printing and distribution to customers for sale.</li>
+            </ul>
+            <p>This solution significantly reduces manual errors, saves time, and ensures the efficient handling of mobile network e-pins for business operations.</p>
+            <a href="https://cardgen.onrender.com" class="btn btn-outline-primary rounded-pill">Visit Site <i class="bi bi-globe"></i></a>
+          </div>
+
+        </div>
       </section>
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
